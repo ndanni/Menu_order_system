@@ -39,7 +39,6 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `address` text NOT NULL,
   `phonenumber` varchar(40) NOT NULL,
   `created_date` date NOT NULL,
-  `order_status` tinyint(1) NOT NULL,
   PRIMARY KEY (`order_id`),
   KEY `food_id` (`food_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
@@ -48,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `food_id`, `others`, `firstname`, `lastname`, `email`, `address`, `phonenumber`, `created_date`, `order_status`) VALUES
+INSERT INTO `orders` (`order_id`, `food_id`, `others`, `firstname`, `lastname`, `email`, `address`, `phonenumber`, `created_date`) VALUES
 (1, 'Yam and egg sauce', '', 'Ndane', 'Ndazhaga', 'ndazhagan@gmail.com', 'Ibadan', '08039114740', '2018-12-06', 0),
 (2, 'Golden yam', '', 'Joy', 'Ndazhaga', 'ndazhagan@gmail.com', 'Ibadan', '08039114740', '2018-12-06', 0);
 COMMIT;
