@@ -15,6 +15,8 @@ $string = $firstname . ',' . $lastname . ',' . $email . ',' . $phonenumber . ','
 fwrite ($fileHandler, $string);
 fclose ($fileHandler);
 }
+$sql = "CREATE DATABASE project";
+    $sql = "CREATE TABLE orders (order_id INT NOT NULL AUTO_INCREMENT, firstname VARCHAR(100) NOT NULL, lastname VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, phonenumber VARCHAR(100) NOT NULL, `address` TEXT(100) NOT NULL, food_id VARCHAR(100) NOT NULL, others VARCHAR(100) NOT NULL, date_field DATE,PRIMARY KEY( order_id )FOREIGN KEY ( food_id ))";
 function saveToDatabase($firstname, $lastname, $email, $phonenumber, $address, $food_id, $others) {
     $serverName = "localhost";
     $database = "project";
