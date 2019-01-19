@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Dane's special meals</title>
-        <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dane's meals</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="stylesheet.css" type="text/css"/>
     <script type="text/javascript">
     function validateForm() {
         var email = document.forms["details"]["email"];
@@ -50,55 +55,74 @@
     </script>
     </head>
     <body>
-    <form method="POST" name = "details" action ="submit.php" onsubmit="return validateForm()">
-        <fieldset>
-            <h1>Dane's special meals</h1>
-            <div id="nav-bar">
-                <a href="homepage.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="contact.html">Contact us</a>
-                <a href="adminPage.php">Login <i>(Admin Only)</i></a>
-            </div>
-            <div>
-                <h5>Please fill in your details</h5>
-                <div>
-                <label for="firstname">First name</label>
-                <input type="text"name="firstname"id="firstname"placeholder="First name">
-                <br>
-                <label for="lastname">Last name</label>
-                <input type="text"name="lastname"id="lastname"placeholder="Last name">
-                <br>
-                <label for="email">Email</label>
-                <input type="email"name="email"id="email"placeholder="email">
-                <br>
-                <label for="phonenumber">Phone number</label>
-                <input type="tel"name="phonenumber"id="phonenumber"placeholder="Phone number">
-                <br>
-                <label for="address">Address</label>
-                <input type="text"name="address"id="address"placeholder="Address">
-                <br>
-                <label for="food_id">Meal</label>
-                <select name="food_id">
-                    <option value="-1"selected>Select your meal </option>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="header">Dane's special meals</h1>
+                <h4>(meals for your satisfaction)</h4>
+        </div>
+        </div>
+        <nav class="navbar navbar-default">
+        <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a  href="homepage.html">Home</a></li>
+                    <li><a  href="contact.html">Contact us</a></li>
+                    <li><a  href="adminPage.php">Login <i>(Admin Only)</a></li>
+                </ul>
+        </div>
+    </nav>
+    
+            <div class="container">
+                <div style ="width:70%; margin: 70px auto">
+                    <h1 class="text-center">Delivery form</h1>
+                    <form role= "form"method="POST" name = "details" action ="submit.php" onsubmit="return validateForm()">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="firstname">First name</label>
+                                <input type="text"name="firstname"id="firstname"class="form-control" placeholder="Enter your first name">
+                            </div>
+                            <div class="col-md-6">
+                                    <label for="lastname">Last name</label>
+                                <input type="text" name="lastname"id="lastname"class="form-control" placeholder="Enter your last name">
+                            </div>
+                            </div> 
+                        <div class="row">
+                        <div class="col-md-6">
+                            <label for="email">Email</label>
+                            <input type="text"name= "email"id="email" class="form-control" placeholder="email">
+                        </div>
+                        <div class="col-md-6">
+                                <label for="phonenumber">Phone number</label>
+                            <input type="tel"name="phonenumber"id="phonenumber" class="form-control" placeholder="Phone number">
+                        </div>
+                        </div>
+            <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" type="text"name="address"id="address" placeholder="1234 Main str"></textarea>
+             </div>
+            <div class="col">
+                <label for="food_id" name="food_id"id= "food_id">Meal</label>
+                <select class="form-control">
+                    <option value="Choose">Choose...</option>
                     <option value="Fried rice and chicken">Fried rice and chicken</option>
                     <option value="Yam and egg sauce">Yam and egg sauce</option>
                     <option value="Golden yam">Golden yam</option>
-                    <option value="spaghetti and meat balls">Spaghetti and meat balls</option>
+                    <option value="Spaghetti and meat balls">Spaghetti and meat balls</option>
                     <option value="Beans and yam">Beans and yam</option>
-                    <option value="Bean cake and pap">Bean cake and pap</option>
-                    <option value="Pounded yam and vegetable soup">Pounded yam and vegetable soup</option>
-                    <option value="semovita and okra soup">Semovita and okra soup</option>
-                    <option value="amala and ewedu">Amala and ewedu</option>
-                    <option value="Moi moi and Pap">Moi moi and Pap</option>
-                </select>
-                <br>
-                <label for="Others">Others</label>
-                <input type="text"name="Others"id="Others"placeholder="Others">
-                <br>
-                <button>Submit</button>
+                    <option value="Bean cake and yam">Bean cake and yam</option>
+                    <option value="Pounded yam">Pounded yam</option>
+                    <option value="Semovita and okra">Semovita and okra</option>
+                    <option value="Amala and ewedu">Amala and ewedu</option>
+                    <option value="Moi moi and pap">Moi moi and pap</option>
+            </select>
             </div>
+            <div class="submit" style="margin: 10px 0;">
+            <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-        </fieldset>
-    </form>
-    </body>
+            </form>
+</div>
+</div>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/pooper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 </html>
