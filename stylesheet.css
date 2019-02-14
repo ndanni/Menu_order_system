@@ -7,13 +7,13 @@ body{
 }
 .thumbnail {
     display: inline-block;
-    padding: 20px;
-
+    padding: 15px;
 }
 p > a{
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     font-style: italic;
+    text-align: center;
 }
 .nav {
     text-align: center;
@@ -53,6 +53,8 @@ li a:hover {
 }
 .gallery{
     display:inline-flex;
+    background-image: url(images/download\ \(4\).jpg);
+    background-repeat: inherit;
 }
 .gallery-item {
 width: 50%;
@@ -76,11 +78,4 @@ background-color: orange;
 }
 h4 {
 position: relative;
-}
-button {
-background: none;
-border: none;
-font-size: 30px;
-position: relative;
-margin: auto;
 }
